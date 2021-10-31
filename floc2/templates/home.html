@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Attendance application</title>
+    <style>
+        body, html {
+            height: 100%;
+          } 
+        body {
+            
+            background-image: url('static/dash1.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        table{
+            padding-left: 30%;
+            height: 70%;
+            width: 100%;
+            
+        
+            
+        }
+        div[class*=container] {
+            background-color: rgb(211, 212, 212);
+            width: 400px;
+            height: 200px;
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 1.5em;
+            box-shadow: 0px 11px 35px 2px rgba(255, 255, 255, 0.472);
+
+        }
+        
+        .button-two {
+            border-radius: 4px;
+            background-color: #d35400;
+            border: none;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+        }
+
+
+        .button-two span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button-two span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button-two:hover span {
+            padding-right: 25px;
+        }
+
+        .button-two:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .matter {
+            font-size: 32px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        
+            <tr>
+                <td>
+            <div class="container-1">
+                <p class='matter'>Current Location of Employee</p>
+                <div align='center'>
+                    <button onclick="ToEmpDetails()" class="button-two"><span>view</span></button>
+                    <!-- <input type="button" value="Click to view current details" name='empdetails' onclick="ToEmpDetails()"> -->
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="container-2">
+                <p class='matter'>Add Schedule</p>
+                <div align='center'>
+                    <button onclick="ToSchedule()" class="button-two"><span> Add</span></button>
+    
+    
+                </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+            <td>
+            <div class="container-3">
+                <p class='matter'>Add Employee</p>
+                <div align='center'>
+                    <button onclick="Toadduser()" class="button-two"><span> Add</span></button>
+    
+    
+                </div>
+            </div>
+        </td>
+            <td>
+            <div class="container-4">
+                <p class='matter'>Testing photo</p>
+                <div align='center'>
+                    <button onclick="Toupload()" class="button-two"><span>View</span></button>
+    
+    
+                </div>
+            </div>
+        </td>
+        </tr>
+        </table>
+        <script>
+            function ToEmpDetails() {
+                window.location = '/currentdetails';
+            }
+            function ToSchedule() {
+                window.location = '/renderschedule';
+            }
+            function Toadduser() {
+                window.location = '/addusers';
+            }
+            function Toupload() {
+                window.location = '/showpage';
+            }
+        </script>
+        <!-- <a href="/currentdetails">details</a> -->
+</body>
+
+</html>
+
+<!-- <button onclick="Toadduser()">Click to add user</button> -->

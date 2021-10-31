@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "66449619367",
+    "firebase_url": "https://loctrial1.firebaseio.com",
+    "project_id": "loctrial1",
+    "storage_bucket": "loctrial1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66449619367:android:8b9d6f4386aa7f9e52de82",
+        "android_client_info": {
+          "package_name": "com.example.loc2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66449619367-kvhh006tudmd9fr7rfj9u4efks06m86a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOeNVxL_S9a9nirZoeXQ8s0Z97tqUZivk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66449619367-kvhh006tudmd9fr7rfj9u4efks06m86a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

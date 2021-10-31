@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>data in firebase</title>
+        <style>
+            
+            body, html {
+                height: 100%;
+              } 
+            body {
+                background-image: url('static/locati.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+            }
+        
+            .container {
+               
+                position: relative;
+                top: 30%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+            }
+            
+        
+        th,
+        td {
+            padding: 15px;
+            background-color: rgba(255,255,255,0.2);
+            color: red;
+            text-align: center;
+            font-size: large;
+            
+        }
+        th{
+            color: white;
+        }
+
+        table {
+            background-color: aliceblue;
+            width: 800px;
+            padding-left: 50%;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 1.5em;
+        }
+        .main {
+            background-color: #FFFFFF;
+            width: 400px;
+            height: 400px;
+            margin: 7em auto;
+            border-radius: 1.5em;
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+        }
+        thead {
+            
+                background-color: #55608f;
+                
+            
+        }
+        .heading{
+            font-size: 50px;
+            color:black;
+        }
+
+
+        </style>
+  
+    </head>
+    <body>
+        
+        <p  align="center" class='heading'>Current details</p>
+        <div class ="container">
+
+        
+        <table >
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>latitude</th>
+                <th>longitude</th>
+                <th>date</th>
+            </tr>
+        </thead>
+            {%for doc in di%}
+            
+            <tr class="row">
+                <th><a href="/map/{{doc.id}}">{{doc.id}}</a>
+                </th>
+
+                <td>{{doc.to_dict()['locat'].latitude}}</td>
+                <td>{{doc.to_dict()['locat'].longitude}}</td>
+                <td>{{doc.to_dict()['date'].day}}-{{doc.to_dict()['date'].month}}-{{doc.to_dict()['date'].year}}</td>
+                
+            </tr>
+            {% endfor %}
+            {%for x in ordinates%}
+            
+            <tr>
+                
+                
+                <td>{{x}}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+        <!-- <table >
+            <thead>
+            <tr >
+                <th>Employee</th>
+                <th>Total schedules</th>
+                <th>Attended Schedules</th>
+            </tr>
+        </thead>
+            <tr class="row">
+                <td>Ravi</td>
+                <td>40</td>
+                <td>35</td>
+            </tr>
+            <tr class="row">
+                <td>Nsr</td>
+                <td>15</td>
+                <td>10</td>
+            </tr>
+            <tr class="row">
+                <td>Divya</td>
+                <td>35</td>
+                <td>30</td>
+            </tr>
+            <tr class="row">
+                <td>Ram</td>
+                <td>20</td>
+                <td>18</td>
+            </tr>
+            <tr class="row">
+                <td>Sandeep</td>
+                <td>24</td>
+                <td>20</td>
+            </tr>
+            <tr class="row">
+                <td>Pranav</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            <tr class="row">
+                <td>Sathvik</td>
+                <td>17</td>
+                <td>16</td>
+            </tr>
+            <tr class="row">
+                <td>Shailesh</td>
+                <td>19</td>
+                <td>15</td>
+            </tr>
+        </table> -->
+            <br/>
+           
+        </div>
+    </body>
+</html>

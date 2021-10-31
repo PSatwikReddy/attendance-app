@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            insert user details
+        </title>
+
+
+        <style>
+           
+            body, html {
+                height: 100%;
+              }
+                body {
+                    background-image: url('static/users.jpeg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    
+                }
+              
+            p{
+                color: #144736b4;
+                border: solid 2px #144736b4;
+                padding: 2px;
+                font-size: 32px;
+                font-weight: 1000;
+                font-style: initial;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+            .container {
+
+                
+                border: solid 2px #13694db4;
+                background-color: #ffffff;
+                border-color: #122293;
+                margin: 0 auto;
+                max-width: 300px;
+                max-height:800px;
+                position: relative;
+                width: 100%;
+                padding: 40px;
+                top:15%;
+                left:20%;
+                border-radius: 1em;
+                box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.4);
+                
+                
+              }
+              .user{
+                
+                background: none;
+                border: none;
+                    border-bottom: solid 2px #13694db4;
+                    color: #122293;
+                    font-size: 1.000em;
+                font-weight: 400;
+                letter-spacing: 1px;
+                    margin: 0em 0 1.875em 0;
+                    padding: 0 0 0.875em 0;
+                    width: 100%;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    -ms-box-sizing: border-box;
+                    -o-box-sizing: border-box;
+                    box-sizing: border-box;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+              }
+              label{
+                color: #13694db4;
+                font-size: 20px;
+                font-weight: 700;
+              }
+              
+                #form_button {
+                    background: none;
+                    border: solid 2px #13694db4;
+                    color: #13694db4;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 14px;
+                    font-weight: bold;
+                    outline: none;
+                    padding: 20px 35px;
+                    text-transform: uppercase;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+                
+                .submit {
+                    text-align: center;
+                }
+                
+
+                #form_button:hover {
+                    background: #144736b4;
+                    color: #ffffff;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p align="center" >ADD EMPLOYEE</p>
+        <form action="" method="POST" enctype="multipart/form-data">
+            
+                
+                    <label>Username</label><br>
+                    <input type="text"
+                     name='username' class='user'><br>
+
+                <label>Email</label><br>
+                    <input type="email" name='email' class='user'><br>
+                    <label>Phone Number</label><br>
+                    <input type="tel" name='pno' class='user'><br>
+                    <label>Designation</label><br>
+                    <input type="text" name='designation' class='user'><br>
+                    <input type="file" name="file" />
+                    <div class="submit">
+                        <input type="submit" value="submit" id="form_button"/>
+                    </div>
+            
+        </form>
+        {% if error %}
+        <p class="forgot" align="center"> {{ error }}
+      {% endif %}
+    </div>
+    </body>
+</html>

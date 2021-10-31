@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        insert data
+    </title>
+    <style>
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-image: url('static/cal2.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        p {
+            border: solid 2px black;
+
+            font-size: 32px;
+            font-weight: 700;
+            font-style: initial;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .container {
+
+
+            border: solid 2px #122293;
+            background-color: #ffffff;
+            border-color: #122293;
+            margin: 0 auto;
+            max-width: 400px;
+            max-height: 600px;
+            position: relative;
+            width: 100%;
+            padding: 40px;
+            top: 20%;
+            left: 20%;
+            border-radius: 1em;
+            box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.4);
+
+
+        }
+
+        .user {
+
+            background: none;
+            border: none;
+            border-bottom: solid 2px black;
+            color: black;
+            font-size: 1.000em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0em 0 1.875em 0;
+            padding: 0 0 0.875em 0;
+            width: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        label {
+            color: black;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        #form_button {
+            background: none;
+            border: solid 2px black;
+            color: black;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            outline: none;
+            padding: 20px 35px;
+            text-transform: uppercase;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .submit {
+            text-align: center;
+        }
+
+
+        #form_button:hover {
+            background: black;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p align="center">ENTER SCHEDULE
+        <p></p>
+        <form action="http://localhost:5000/addschedule" method="POST">
+
+            <label>Employee Username:</label><br>
+            <input type="text" name='user' class='user'><br>
+            <label>Enter Date:</label>
+            <input type="date" date-date-inline-picker='true' name='dt' class='user'><br>
+            <!-- <input type="datetime" name='dt' class='user'><br> -->
+
+            <label> Location :</label><input type="text" name='loc' class='user'><br>
+
+            <div class="submit">
+                <input type="submit" value="submit" id="form_button" />
+            </div>
+            {% if error %}
+            <p class="forgot" align="center"> {{ error }}
+                {% endif %}
+
+        </form>
+
+    </div>
+</body>
+
+</html>
